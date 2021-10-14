@@ -38,7 +38,7 @@ jobs:
           region: oss-cn-beijing
           bucket: huoqi-public
           assets: |
-            ./dist/dongtai-1.0.5.tar.gz:/iast/dongtai-test-1.0.5.tar.gz
+            ./dist/dongtai-1.0.6.tar.gz:/iast/dongtai-test-1.0.6.tar.gz
 
       - name: Upload to oss latest
         id: upload_to_oss_latest
@@ -49,7 +49,7 @@ jobs:
           region: oss-cn-beijing
           bucket: huoqi-public
           assets: |
-            ./dist/dongtai-1.0.5.tar.gz:/iast/dongtai-test-latest.tar.gz
+            ./dist/dongtai-1.0.6.tar.gz:/iast/dongtai-test-latest.tar.gz
 
       - name: finish build
         uses: joelwmale/webhook-action@master
