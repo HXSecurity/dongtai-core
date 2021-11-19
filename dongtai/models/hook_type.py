@@ -21,12 +21,11 @@ class HookType(models.Model):
                                  default='',
                                  on_delete=models.DO_NOTHING,
                                  db_constraint=False)
-    strategy = models.ForeignKey('dongtai.IastStrategyModel',
+    vul_strategy = models.ForeignKey('dongtai.IastStrategyModel',
                                  blank=True,
                                  default='',
                                  on_delete=models.DO_NOTHING,
-                                 db_constraint=False,
-                                 related_name='vul_strategy')
+                                 db_constraint=False,)
     class Meta:
         managed = get_managed()
         db_table = 'iast_hook_type'
