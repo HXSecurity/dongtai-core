@@ -1,4 +1,5 @@
 from django.db import models
+from dongtai.models.hook_strategy import HookStrategy
 
 from dongtai.models.agent import IastAgent
 from dongtai.models.vul_level import IastVulLevel
@@ -41,6 +42,10 @@ class IastVulnerabilityModel(models.Model):
                                   on_delete=models.DO_NOTHING,
                                   db_constraint=False,
                                   db_column='strategy_id')
+    hook_strategy = models.ForeignKey(HookStrategy,
+                                      on_delete=models.DO_NOTHING,
+                                      db_constraint=False,
+                                      db_column='hook_strategy_id')
     hook_type = models.ForeignKey(HookType,
                                   on_delete=models.DO_NOTHING,
                                   db_constraint=False,
