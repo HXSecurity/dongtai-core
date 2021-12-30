@@ -1,0 +1,2 @@
+dongtai-core,version,1.2.0
+dongtai-core,commit_hash,8f320ab40ab63697c9e381a958ab4c21253c279a
